@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+
+:root{
+    /* 主色：區塊標題、導覽列 */
+    --primary-color: #6B9080;
+
+    /* 輔色：卡片、標籤、裝飾區塊 */
+    --secondary-color: #C8D5B9;
+
+    /* 背景主色：整體頁面背景 */
+    --bg-color: #F6FFF8;
+
+    /* 區塊背景色：內容卡片 */
+    --card-bg-color: #ffffff;
+
+    /* 標題文字色 */
+    --heading-color: #2F3E46;
+
+    /* 內文文字色 */
+    --text-color: #4F5D5A;
+
+    /* 次要文字色 */
+    --subtext-color: #7B8A86;
+
+    /* 邊框色 */
+    --border-color: #DDE8E1;
+
+    /* 強調色（姓名、技能標籤） */
+    --accent-color: #84A98C;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版練習</title>
+    <link rel="stylesheet" href="css/20260527.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: "LXGW WenKai TC", cursive;
+        }
+
+        .wrapper {
+            width: 1024px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imgbox {
+            width: 1024px;
+            height: 200px;
+            background-color: var(--secondary-color);
+            background-image: url(images/pink.avif);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            display: inline-block;
+        }
+
+        nav ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            display: block;
+            background-color: var(--secondary-color);
+            color: var(--heading-color);
+            margin-right: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px 2px rgba(90, 74, 66, 0.3);
+            transition: border-radius 1s, box-shadow 1s;
+        }
+
+        nav ul li a:hover {
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgba(90, 74, 66, 0.5);
+        }
+
+        .content {
+            background-color: var(--cbg-color);
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .content h1 {
+            color: var(--heading-color);
+            font-size: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            color: var(--text-color);
+            font-size: 17px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content a {
+            display: block;
+            background-color: var(--button-color);
+            width: 100px;
+            height: 50px;
+            margin: 0 auto;
+            text-decoration: none;
+            color: var(--bg-color);
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 6px 2px #B85A68;
+            transition: box-shadow 0.5s;
+        }
+
+        .content a:hover {
+            box-shadow: 2px 2px 10px 2px var(--primary-color);
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        .footer p {
+            color: var(--heading-color);
+            font-size: 15px;
+            font-weight: bold;
+        }
+        @media screen and (max-width: 1200px) and (min-width:1025px) {
+            .wrapper{
+                width: 100%;
+            }
+        }
+    
+        @media screen and (max-width: 1024px){
+            .wrapper{
+                width: 100%;
+            }
+            .imgbox{
+                width: 100%;
+                background-image: url(images/p1.avif);
+                height: 140px;
+            }
+            nav ul{
+                display: block;
+                padding-left: 20px;
+                margin: 0;
+            }
+            nav ul li{
+                float: none;
+                margin-bottom: 10px;
+            }
+            .content{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .content p{
+                line-height: 1.4;
+                text-align: left;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <div class="imgbox"></div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-house btn-text-primary" ></i>
+                            首頁
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-wand-magic-sparkles btn-text-primary" ></i>
+                            最新商品
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-fire btn-text-primary" ></i>
+                            熱門推薦
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-heart btn-text-primary" ></i>
+                            品牌故事
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-comments btn-text-primary"></i>
+                            聯絡我們
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1><i class="fa-solid fa-crown" style="font-size:70px;color:#D8B4A0;"></i></h1>
+            <h2>💄品牌理念</h2>
+            <p class="fw-300">
+                我們相信，美麗來自日常細緻的保養習慣，而不是短暫的修飾。透過嚴選溫和成分與植萃精華，我們打造適合各種膚質的保養產品，讓肌膚在穩定修護中恢復自然光澤。希望每一位使用者，都能在日常中感受到安心與自信，展現最真實的自己。
+            </p>
+            <h2>✨產品特色</h2>
+            <p class="fw-700">
+                我們的產品結合現代保養科技與天然植萃理念，針對保濕、修護與亮白需求進行設計。質地輕盈不黏膩，能迅速吸收並深入肌膚底層補充水分，同時強化肌膚屏障。無論是日常保養或妝前打底，都能讓妝感更服貼、肌膚更透亮，展現自然健康的光澤感。
+            </p>
+            <h2>🌸美麗生活</h2>
+            <p class="fw-400">
+                美麗不只是外表的改變，更是一種生活態度。我們希望透過簡單有效的保養步驟，讓每個人在忙碌生活中也能照顧自己。每天花一點時間與肌膚對話，選擇適合自己的產品與節奏，慢慢累積改變，讓自信與光采從內而外自然散發。
+            </p>
+            <a href="#">了解更多</a>
+        </div>
+        <div class="footer">
+            <p>PowerBy xxx.2026.05</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人首頁</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/20260602.css">
+    <style>
+        body{
+            background-color: var(--bg-color);
+        }
+        .s01{
+            background-color: var(--bg-color);
+            height: 100vh;
+        }
+        .s01 .box01{
+            width: 200px;
+            height: 200px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .s01 .box02{
+            width: 200px;
+            height: 200px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .s01 .box03{
+            width: 200px;
+            height: 200px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .s01 .box04{
+            width: 200px;
+            height: 200px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .s01 .userImg{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            bottom: 100px;
+            right: 100px;
+            background-color: var(--card-bg-color);
+            background-image: url(images/people2.avif);
+            background-position: center center;
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 2px 2px 6px 2px var(--heading-color);
+        }
+        .userText{
+            color: var(--text-color);
+            position: absolute;
+            top: 55%;
+            left: 70%;
+            right: 10%;
+        }
+        .s02{
+            padding: 80px 10%;
+            background-color: var(--card-bg-color);
+        }
+        .s02 h2{
+            font-size: 36px;
+        }
+        .s02 .card{
+            display: inline-block;
+            margin: 15px;
+            width: 240;
+            background-color: var(--secondary-color);
+            padding: 20px;
+            text-align: left;
+            border-radius: 12px;
+        }
+        .s02 .card h3{
+            counter-reset: var(--text-color);
+            margin-top: 0;
+        }
+        .s02 .card p{
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+        .s02 .card a{
+            background-color: var(--border-color);
+            padding: 10px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: var(--subtext-color);
+        }
+    </style>
+</head>
+<body>
+    <section class="s01">
+        <div class="box01"></div>
+        <div class="box02"></div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="userImg"></div>
+        <div class="userText">
+            <h1>王小明履歷</h1>
+            <hr>
+            <h2>應徵職位: 軟體工程師</h2>
+            <p>座右銘: 指標文件大小女孩外國公開老人對象本報想起，學院招生都要優化主持古代把它刺激治理獨立高中還沒有手指屬於，上下還會隨後行情物理我的西部快捷，為此為何見面身上無論分類，警察成了浪漫我真出版社幫助，暫時生氣味道說過轉帖右鍵，前面瞭解作用費用任意，的確構成較大律師。</p>
+        </div>
+    </section>
+    <section class="s02">
+        <h2>我的作品</h2>
+        <div class="card">
+            <h3>切版練習</h3>
+            <p>使用HTML，CSS練習切版。</p>
+            <a href="20260527.html" target="_blank">查看作品</a>
+        </div>
+        <div class="card">
+            <h3>Table排版</h3>
+            <p>使用HTML，CSS，JavaScript製作展示頁面。</p>
+            <a href="20260605-ch5.html">查看作品</a>
+        </div>
+        <div class="card">
+            <h3>CH6切版練習</h3>
+            <p>使用HTML，CSS，JavaScript製作展示頁面。</p>
+            <a href="20260618-ex02-travelFood.html">查看作品</a>
+        </div>
+        <div class="card">
+            <h3>購物網站</h3>
+            <p>使用HTML，CSS，JavaScript製作展示頁面。</p>
+            <a href="#">查看作品</a>
+        </div>
+    </section>
+</body>
+</html>

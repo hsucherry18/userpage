@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+
+:root {
+    /* 主色-玫瑰裸粉：品牌形象、重點區塊 */
+    --primary-color: #E8A7B1;
+
+    /* 輔色-奶茶杏色：卡片、裝飾元素 */
+    --secondary-color: #D9C2B0;
+
+    /* 背景主色-象牙白：提升閱讀舒適度 */
+    --bg-color: #FAF7F4;
+
+    --cbg-color: #f5edc9;
+
+    /* 標題文字色-深咖啡：展現高級感 */
+    --heading-color: #5A4A42;
+
+    /* 內文文字色-暖灰色：降低閱讀疲勞 */
+    --text-color: #7A6F68;
+
+    /* 按鈕色-玫瑰紅：吸引用戶點擊 */
+    --button-color: #D86A7A;
+}
+
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-5600 {
+    font-weight: 5600;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.btn-text-primary {
+    color: var(--button-color);
+}
+
+.btn-text-secondary {
+    color: var(--primary-color);
+}
+
+.box {
+            height: 150px;
+        }
+
+        /* 四種方向的卡片都需要定位 */
+.roller-l,
+.roller-r,
+.roller-b,
+.roller-t {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* 遮罩層 */
+.roller_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+
+    /* 統一動畫 */
+    transition: transform 0.8s ease;
+}
+
+
+/* ================= */
+/* 左邊滑入 */
+/* ================= */
+
+.roller-l .roller_box {
+    transform: translateX(-100%);
+}
+
+.roller-l:hover .roller_box {
+    transform: translateX(0);
+}
+
+
+/* ================= */
+/* 右邊滑入 */
+/* ================= */
+
+.roller-r .roller_box {
+    transform: translateX(100%);
+}
+
+.roller-r:hover .roller_box {
+    transform: translateX(0);
+}
+
+
+/* ================= */
+/* 下方滑入 */
+/* ================= */
+
+.roller-b .roller_box {
+    transform: translateY(100%);
+}
+
+.roller-b:hover .roller_box {
+    transform: translateY(0);
+}
+
+
+/* ================= */
+/* 上方滑入 */
+/* ================= */
+
+.roller-t .roller_box {
+    transform: translateY(-100%);
+}
+
+.roller-t:hover .roller_box {
+    transform: translateY(0);
+}
+
+
+/* 圖片 */
+img {
+    width: 100%;
+    display: block;
+}
+
+/*背景圖*/
+.bg-cover{
+            background-position: center center;
+            background-size: cover;
+        }
