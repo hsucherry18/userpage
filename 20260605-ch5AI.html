@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飲品菜單</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/20260527.css">
+
+    <style>
+        :root {
+            --kb-primary: #4a3728;
+            --kb-secondary: #7c624d;
+            --kb-light: #f8f4ed;
+            --kb-border: #d8c8b3;
+            --kb-hover: #efe5d6;
+            --kb-text: #3b2d23;
+        }
+
+        body {
+            background-color: var(--kb-light);
+            font-family: "Microsoft JhengHei", sans-serif;
+            color: var(--kb-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        /* 標題 */
+        .display-3 {
+            color: var(--kb-primary);
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
+        }
+
+        /* 表格 */
+        .table {
+            background-color: #fff;
+            border: 2px solid var(--kb-border);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+        }
+
+        /* 表頭 */
+        .table thead {
+            background-color: var(--kb-primary);
+            color: #fff;
+        }
+
+        .table thead th {
+            padding: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            border-color: var(--kb-primary);
+        }
+
+        /* 表格內容 */
+        .table tbody td {
+            padding: 15px;
+            vertical-align: middle;
+            color: var(--kb-text);
+        }
+
+        /* 隔行底色 */
+        .table tbody tr:nth-child(even) {
+            background-color: #fcfaf7;
+        }
+
+        /* Hover效果 */
+        .table-hover tbody tr:hover {
+            background-color: var(--kb-hover);
+            transition: .3s;
+        }
+
+        /* 邊框 */
+        .table-bordered td,
+        .table-bordered th {
+            border-color: var(--kb-border);
+        }
+
+        /* caption */
+        caption {
+            caption-side: top;
+            text-align: center;
+            color: var(--kb-secondary);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* 商品編號 */
+        tbody td:first-child {
+            font-weight: bold;
+            color: var(--kb-secondary);
+        }
+
+        /* 商品名稱 */
+        tbody td:nth-child(2) {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--kb-primary);
+        }
+
+        /* 價格 */
+        tbody td:nth-child(3) {
+            color: #8b4513;
+            font-weight: 900;
+        }
+
+        /* 庫存 */
+        tbody td:nth-child(4) {
+            color: #6d5845;
+            font-weight: bold;
+        }
+
+        /* 備註 */
+        tbody td:nth-child(5) {
+            color: #7a6a58;
+            line-height: 1.8;
+        }
+
+        /* 手機版 */
+        @media screen and (max-width: 768px) {
+
+            .display-3 {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+
+            .table-rwd thead,
+            caption {
+                display: none;
+            }
+
+            .table-rwd tbody tr {
+                display: block;
+                margin-top: 15px;
+                background: #fff;
+                border: 2px solid var(--kb-border);
+                border-radius: 10px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+            }
+
+            .table-rwd tbody tr td {
+                display: block;
+                overflow: hidden;
+                border: none;
+            }
+
+            .table-rwd tbody tr td::before {
+                content: attr(data-th) "：";
+                font-size: 18px;
+                font-weight: bold;
+                color: var(--kb-primary);
+                display: block;
+                float: left;
+                width: 30%;
+                text-align: right;
+                padding-right: 1em;
+            }
+
+            .table-rwd tbody tr td span {
+                display: block;
+                float: left;
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="display-3 text-center">
+            飲料店系統
+        </div>
+
+        <table class="table mt-3 table-bordered table-hover table-rwd">
+
+            <caption>飲品菜單 Menu</caption>
+
+            <thead>
+                <tr>
+                    <th>產品編號</th>
+                    <th>產品名稱</th>
+                    <th>產品價格</th>
+                    <th>產品數量</th>
+                    <th>產品備註</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB001</span></td>
+                    <td data-th="產品名稱"><span>熟成紅茶</span></td>
+                    <td data-th="產品價格"><span>30元</span></td>
+                    <td data-th="產品數量"><span>120</span></td>
+                    <td data-th="產品備註"><span>經典招牌紅茶，入口回甘。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB002</span></td>
+                    <td data-th="產品名稱"><span>麗春紅茶</span></td>
+                    <td data-th="產品價格"><span>35元</span></td>
+                    <td data-th="產品數量"><span>100</span></td>
+                    <td data-th="產品備註"><span>茶香濃郁，層次豐富。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB003</span></td>
+                    <td data-th="產品名稱"><span>太妃紅茶</span></td>
+                    <td data-th="產品價格"><span>40元</span></td>
+                    <td data-th="產品數量"><span>80</span></td>
+                    <td data-th="產品備註"><span>帶有焦糖與麥芽香氣。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB004</span></td>
+                    <td data-th="產品名稱"><span>春芽冷露</span></td>
+                    <td data-th="產品價格"><span>35元</span></td>
+                    <td data-th="產品數量"><span>95</span></td>
+                    <td data-th="產品備註"><span>清爽順口，回甘度佳。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB005</span></td>
+                    <td data-th="產品名稱"><span>雪藏紅茶</span></td>
+                    <td data-th="產品價格"><span>55元</span></td>
+                    <td data-th="產品數量"><span>70</span></td>
+                    <td data-th="產品備註"><span>綿密奶蓋搭配熟成紅茶。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB006</span></td>
+                    <td data-th="產品名稱"><span>熟成冷露</span></td>
+                    <td data-th="產品價格"><span>35元</span></td>
+                    <td data-th="產品數量"><span>85</span></td>
+                    <td data-th="產品備註"><span>甘醇茶感，適合日常飲用。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB007</span></td>
+                    <td data-th="產品名稱"><span>胭脂紅茶</span></td>
+                    <td data-th="產品價格"><span>40元</span></td>
+                    <td data-th="產品數量"><span>60</span></td>
+                    <td data-th="產品備註"><span>花果香氣明顯，風味獨特。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB008</span></td>
+                    <td data-th="產品名稱"><span>春梅冰茶</span></td>
+                    <td data-th="產品價格"><span>50元</span></td>
+                    <td data-th="產品數量"><span>75</span></td>
+                    <td data-th="產品備註"><span>梅香與茶香完美結合。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB009</span></td>
+                    <td data-th="產品名稱"><span>熟成歐蕾</span></td>
+                    <td data-th="產品價格"><span>60元</span></td>
+                    <td data-th="產品數量"><span>90</span></td>
+                    <td data-th="產品備註"><span>鮮奶比例提升，口感濃郁。</span></td>
+                </tr>
+
+                <tr>
+                    <td data-th="產品編號"><span>KB010</span></td>
+                    <td data-th="產品名稱"><span>白玉歐蕾</span></td>
+                    <td data-th="產品價格"><span>70元</span></td>
+                    <td data-th="產品數量"><span>65</span></td>
+                    <td data-th="產品備註"><span>Q彈白玉搭配香醇鮮奶。</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
