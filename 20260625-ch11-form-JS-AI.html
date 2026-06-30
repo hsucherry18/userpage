@@ -9,183 +9,233 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/20260527.css">
     <style>
-        /* =========================
-   背景
-========================= */
         body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fff1f8 0%, #f0f9ff 50%, #fef6ff 100%);
-            position: relative;
-            overflow-x: hidden;
+            background: #eef3f8;
+            font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
         }
 
-        body::before,
-        body::after {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            opacity: .25;
-            z-index: 0;
-        }
+        /* ---------- 標題 ---------- */
 
-        body::before {
-            width: 280px;
-            height: 280px;
-            background: #ff4d6d;
-            top: -80px;
-            left: -80px;
-            filter: blur(30px);
-        }
-
-        body::after {
-            width: 320px;
-            height: 320px;
-            background: #7b2cbf;
-            bottom: -120px;
-            right: -120px;
-            filter: blur(40px);
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* =========================
-   主標題
-========================= */
         .display-4 {
-            background: linear-gradient(135deg, #ff4d6d, #ff8fa3, #7b2cbf) !important;
+            background: linear-gradient(90deg, #1d4e89, #2563eb);
             color: #fff !important;
-            border-radius: 18px;
-            box-shadow: 0 12px 30px rgba(255, 77, 109, .25);
+            border-radius: 10px;
+            font-weight: bold;
             letter-spacing: 3px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
         }
 
-        /* =========================
-   表單卡片
-========================= */
-        .col-md-6.mt-3 {
-            background: #f5d3e2;
-            border-radius: 18px;
+        .display-5 {
+            background: linear-gradient(90deg, #198754, #20c997);
+            color: #fff !important;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+        }
+
+        /* ---------- 表單區 ---------- */
+
+        .row.justify-content-center>.col-md-6:first-child {
+
+            background: #fff;
             padding: 30px;
-            box-shadow: 0 12px 30px rgba(123, 44, 191, .12);
-            border: 1px solid #eb48a7;
+            border-radius: 12px;
+            margin-top: 20px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, .08);
         }
 
-        /* =========================
-   Input
-========================= */
+        /* ---------- Label ---------- */
+
+        .form-label,
+        .form-floating label {
+            color: #495057;
+            font-weight: 600;
+        }
+
+        /* ---------- Input ---------- */
+
         .form-control,
         .form-select {
-            border-radius: 12px;
-        }
 
-        .form-control:focus,
-        .form-select:focus,
-        .form-check-input:focus {
-            border-color: #ff4d6d;
-            box-shadow: 0 0 0 .25rem rgba(255, 77, 109, .25);
-        }
-
-        /* =========================
-   按鈕
-========================= */
-        .btn-primary {
-            background: linear-gradient(135deg, #ff4d6d, #ff758f);
-            border: none;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
             transition: .3s;
         }
 
+        .form-control:focus,
+        .form-select:focus {
+
+            border-color: #2563eb;
+            box-shadow: 0 0 0 .2rem rgba(37, 99, 235, .18);
+        }
+
+        /* ---------- Checkbox Radio ---------- */
+
+        .form-check {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .form-check-input {
+            cursor: pointer;
+        }
+
+        .form-check-label {
+            cursor: pointer;
+        }
+
+        /* ---------- 配料、供應方式 ---------- */
+
+        #topping_group,
+        #supply_group {
+
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+
+            border: 1px solid #dee2e6;
+        }
+
+        #topping_group.is-valid,
+        #supply_group.is-valid {
+
+            border: 2px solid #198754;
+        }
+
+        #topping_group.is-invalid,
+        #supply_group.is-invalid {
+
+            border: 2px solid #dc3545;
+        }
+
+        /* ---------- Button ---------- */
+
+        .btn {
+
+            border-radius: 8px;
+            min-width: 110px;
+            font-weight: bold;
+            transition: .25s;
+        }
+
+        .btn-primary {
+
+            background: #2563eb;
+            border: none;
+        }
+
         .btn-primary:hover {
-            background: linear-gradient(135deg, #ff758f, #ff4d6d);
+
+            background: #1d4ed8;
             transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background: #fff;
-            border: 2px solid #7b2cbf;
-            color: #7b2cbf;
-            transition: .3s;
+
+            border: none;
         }
 
         .btn-secondary:hover {
-            background: #7b2cbf;
-            color: white;
+
+            transform: translateY(-2px);
         }
 
-        /* =========================
-   Switch / Checkbox / Radio
-========================= */
-        .form-check-input:checked {
-            background-color: #ff4d6d;
-            border-color: #ff4d6d;
-        }
+        /* ---------- 明細 ---------- */
 
-        .form-switch .form-check-input:checked {
-            background-color: #ff4d6d;
-        }
-
-        /* =========================
-   明細標題
-========================= */
-        .display-5 {
-            background: linear-gradient(135deg, #38b000, #70e000) !important;
-            color: white !important;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px rgba(56, 176, 0, .2);
-        }
-
-        /* =========================
-   明細卡片
-========================= */
         #showmessage {
+
             background: #fff;
+
             margin-top: 20px;
+
+            border-radius: 10px;
+
             padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-            border-left: 6px solid #ff4d6d;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+            border-left: 6px solid #2563eb;
         }
 
         #showmessage h3 {
-            padding: 10px 0;
-            margin-bottom: 10px;
-            border-bottom: 1px dashed #ddd;
-            font-size: 1.2rem;
+
+            font-size: 20px;
+
+            padding: 12px 0;
+
+            margin: 0;
+
+            border-bottom: 1px solid #e9ecef;
         }
 
         #showmessage h3:last-child {
+
             border-bottom: none;
         }
 
-        /* =========================
-   Label
-========================= */
-        .form-label,
-        .form-floating label {
-            font-weight: 600;
-            color: #6b2d5c;
+        /* ---------- 驗證 ---------- */
+
+        .valid-feedback {
+
+            font-weight: bold;
         }
 
-        /* =========================
-   驗證動畫
-========================= */
-        .is-valid,
-        .is-invalid {
-            animation: fadeIn .25s;
+        .invalid-feedback {
+
+            font-weight: bold;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(5px);
+        /* ---------- Switch ---------- */
+
+        .form-switch .form-check-input {
+
+            width: 3rem;
+
+            height: 1.5rem;
+        }
+
+        /* ---------- 動畫 ---------- */
+
+        .form-control,
+        .form-select,
+        .btn {
+
+            transition: all .25s ease;
+        }
+
+        /* ---------- RWD ---------- */
+
+        @media (max-width:768px) {
+
+            .row.justify-content-center>.col-md-6:first-child {
+
+                padding: 20px;
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .display-4 {
+
+                font-size: 2rem;
             }
+
+            .display-5 {
+
+                font-size: 1.7rem;
+            }
+
+            .btn {
+
+                width: 100%;
+
+                margin-top: 10px;
+            }
+
+            #showmessage h3 {
+
+                font-size: 18px;
+            }
+
         }
     </style>
 </head>
@@ -313,15 +363,10 @@
 
             <div class="col-md-6">
                 <div id="showmessage"></div>
-                <div class="text-end mt-4">
-            <button type="button" class="btn btn-secondary me-2" id="detail_cancel">
-                取消
-            </button>
-
-            <button type="button" class="btn btn-primary" id="detail_ok">
-                確認
-            </button>
-        </div>
+                <div class="text-end mt-4" id="detail_btns">
+                    <button type="button" class="btn btn-secondary" id="cancel_detail_btn">取消</button>
+                    <button type="button" class="btn btn-primary" id="confirm_detail_btn">確認</button>
+                </div>
             </div>
 
         </div>
