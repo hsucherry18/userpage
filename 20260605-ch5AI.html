@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP飲品管理系統</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <style>
+        :root {
+            --erp-bg: #f4f6f9;
+            --erp-card: #ffffff;
+            --erp-primary: #1f3a5f;
+            --erp-secondary: #2f5d8a;
+            --erp-border: #d9e2ec;
+            --erp-hover: #eef4fb;
+            --erp-text: #1f2937;
+        }
+
+        body {
+            background: var(--erp-bg);
+            font-family: "Microsoft JhengHei", sans-serif;
+            color: var(--erp-text);
+        }
+
+        /* 側邊欄 */
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, #1f3a5f, #16263d);
+            padding-top: 20px;
+            color: #fff;
+        }
+
+        .sidebar h4 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* 主內容 */
+        .main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        /* 上方bar */
+        .topbar {
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        /* 卡片 */
+        .card-box {
+            background: var(--erp-card);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--erp-border);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+        }
+
+        .stat {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--erp-primary);
+        }
+
+        /* 表格 */
+        .table thead {
+            background: var(--erp-primary);
+            color: #fff;
+        }
+
+        .table tbody tr:hover {
+            background: var(--erp-hover);
+        }
+
+        .btn-sm {
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 側邊欄 -->
+    <div class="sidebar">
+        <h4>ERP 系統</h4>
+        <a href="#"><i class="fa fa-chart-line"></i> 儀表板</a>
+        <a href="#"><i class="fa fa-mug-hot"></i> 飲品管理</a>
+        <a href="#"><i class="fa fa-box"></i> 庫存管理</a>
+        <a href="#"><i class="fa fa-users"></i> 會員管理</a>
+        <a href="#"><i class="fa fa-cog"></i> 系統設定</a>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="main">
+
+        <!-- 上方工具列 -->
+        <div class="topbar">
+            <h4>飲品ERP管理系統</h4>
+            <button class="btn btn-primary btn-sm">＋ 新增商品</button>
+        </div>
+
+        <!-- 統計卡 -->
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="card-box">
+                    總品項
+                    <div class="stat">10</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-box">
+                    庫存總量
+                    <div class="stat">840</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-box">
+                    熱賣品項
+                    <div class="stat">熟成紅茶</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-box">
+                    異常品項
+                    <div class="stat">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 表格 -->
+        <div class="card-box">
+            <table class="table table-bordered table-hover align-middle text-center mb-0">
+
+                <thead>
+                    <tr>
+                        <th>產品編號</th>
+                        <th>產品名稱</th>
+                        <th>價格</th>
+                        <th>庫存</th>
+                        <th>備註</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>KB001</td>
+                        <td>熟成紅茶</td>
+                        <td>30</td>
+                        <td>120</td>
+                        <td>經典招牌紅茶</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">編輯</button>
+                            <button class="btn btn-danger btn-sm">刪除</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KB002</td>
+                        <td>麗春紅茶</td>
+                        <td>35</td>
+                        <td>100</td>
+                        <td>茶香濃郁</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">編輯</button>
+                            <button class="btn btn-danger btn-sm">刪除</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KB003</td>
+                        <td>太妃紅茶</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>焦糖麥芽香</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">編輯</button>
+                            <button class="btn btn-danger btn-sm">刪除</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
